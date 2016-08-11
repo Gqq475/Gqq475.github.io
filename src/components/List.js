@@ -38,8 +38,16 @@ class Blog extends Component {
             <Card title={b.title} date={b.created_at } index={b.id} url={b.name} key={Math.random()}/>
           )
         },
-        this.state.posts
-    )}
+        this.state.posts )
+      }else {
+      for (var i = 0; i < this.state.posts.length; i++) {
+        let thisPost = this.state.posts[i];
+        if (thisPost.title.toLowerCase().indexOf(this.state.text)!= -1) {
+          blogCards.push(<Card title={thisPost.title} date={thisPost.created_at} index={thisPost.id} key={Math.random()} url={thisPost.url} />)
+        }
+      }
+    }
+
     return(
       <div>
         <Search  change={this.cardSearch.bind(this)}/>
