@@ -43,7 +43,7 @@ class Blog extends Component {
       for (var i = 0; i < this.state.posts.length; i++) {
         let thisPost = this.state.posts[i];
         if (thisPost.title.toLowerCase().indexOf(this.state.text)!= -1) {
-          blogCards.push(<Card title={thisPost.title} date={thisPost.created_at} index={thisPost.id} key={Math.random()} url={thisPost.url} />)
+          blogCards.push(<Card title={thisPost.title} date={thisPost.created_at} index={thisPost.id} key={Math.random()} url={thisPost.name} />)
         }
       }
     }
