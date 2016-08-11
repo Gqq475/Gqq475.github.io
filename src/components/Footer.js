@@ -1,6 +1,5 @@
 import React from 'react'
 
-import Me from '../images/aboutme.jpg';
 
 class Footer extends React.Component {
   render () {
@@ -21,7 +20,7 @@ class Footer extends React.Component {
       <div style={styles.root}>
         <p>更多信息，请添加我的微信</p>
         <p>微信号：<b>qad11110000</b></p>
-        <img src={Me}  style={styles.img}/>
+        <img src="https://github.com/Gqq475/Gqq475.github.io/blob/master/src/images/aboutme.jpg?raw=true"  style={styles.img}/>
       </div>
     )
   }
