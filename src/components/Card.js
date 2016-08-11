@@ -10,7 +10,8 @@ class Card extends React.Component {
         height:'90px',
         margin:'0 auto',
         marginBottom:'15px',
-        cursor:'pointer'
+        cursor:'pointer',
+      
       },
       left:{
         float:'left',
