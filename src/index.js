@@ -3,7 +3,7 @@ import {render} from 'react-dom';
 import './style/mk.css';
 import './style/common.css';
 import './style/hljs.css';
-import {Router,hashHistory} from 'react-router';
+import {Router,browserHistory} from 'react-router';
 import routes from './routes.js';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
@@ -11,5 +11,5 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
 
-render(<Router routes={routes} history={hashHistory} />
+render(<Router routes={routes} history={browserHistory} />
   ,document.getElementById('root'));
