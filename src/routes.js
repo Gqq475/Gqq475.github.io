@@ -9,7 +9,7 @@ export default (
   <Route path="/" component={App}>
      <IndexRoute component={Home} />
      <Route path="about" component={GithubAccount} />
-     <Route path="blog" component={List} />
-     <Route path="blog/:title" component={Post} />
+     <Route path="blogs" component={List} />
+     <Route path="blogs/:title" component={Post} />
   </Route>
 )
