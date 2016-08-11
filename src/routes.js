@@ -8,8 +8,8 @@ import GithubAccount from './components/GithubAccount/GithubAccount.js';
 export default (
   <Route path="/" component={App}>
      <IndexRoute component={Home} />
-     <Route path="githubinfo" component={GithubAccount} />
-     <Route path="list" component={List} />
-     <Route path="list/:title" component={Post} />
+     <Route path="about" component={GithubAccount} />
+     <Route path="blog" component={List} />
+     <Route path="blog/:title" component={Post} />
   </Route>
 )
