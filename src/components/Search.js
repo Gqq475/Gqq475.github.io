@@ -10,10 +10,10 @@ class Search extends React.Component {
   handelInput(e){
     let x = e.target.value;
     this.props.change(x);
-
+  
   }
   render () {
-  
+
     let styles={
       root:{
         padding:'50px 10px',

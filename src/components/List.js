@@ -10,12 +10,11 @@ class Blog extends Component {
     super();
     this.state={
       text:'',
-      posts: '',
-
+      posts: {},
       wait:true
     }
   }
-  cardSearch(){
+  cardSearch(x){
     this.setState({text:x})
   }
   componentDidMount(){
@@ -31,32 +30,20 @@ class Blog extends Component {
   }
 
   render(){
-    let x=<CircularProgress style={{marginLeft:"50%"}}/>;
-    // console.log(Cards.length);
+    let xx=<CircularProgress style={{marginLeft:"50%"}}/>;
     var blogCards = [];
-    map((b) =>  {
-                  blogCards.push(
-                    <Card title={b.title} date={b.created_at } index={b.id} url={b.name} key={Math.random()}/>
-                  );//用url来控制md的文件名
-                },
-
+    if (this.state.text=='') {
+      map((b) =>  {
+          blogCards.push(
+            <Card title={b.title} date={b.created_at } index={b.id} url={b.name} key={Math.random()}/>
+          )
+        },
         this.state.posts
-
-    );
-    for (var i = 0; i < this.state.posts.length; i++) {
-       let thisPost = this.state.posts[i];
-       if (thisPost.title.indexOf(this.props.search)!= -1) {
-         blogCards.push(<Card title={b.title} date={b.created_at } index={b.id} url={b.name} key={Math.random()} />)
-       }
-     }
+    )}
     return(
       <div>
-        <Search  change={this.state.cardSearch}/>
-        {this.state.wait ? x:
-        <div style={{marginTop:"30px"}}>
-        {blogCards}
-      </div>
-      }
+        <Search  change={this.cardSearch.bind(this)}/>
+        {this.state.wait ? xx : <div style={{marginTop:"30px"}}> {blogCards} </div> }
       </div>
     )
   }
