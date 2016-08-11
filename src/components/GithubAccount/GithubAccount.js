@@ -32,7 +32,7 @@ class GithubAccount extends Component {
     let x=<CircularProgress style={{marginLeft:"50%"}}/>;
     if(!isEmpty(this.state.user)) {
       GitHubInfo = (
-        <div>
+        <div className="coninforepo">
           <UserInfo userInfo={this.state.user} />
           <Repos repos={this.state.repos} />
         </div>
@@ -42,8 +42,9 @@ class GithubAccount extends Component {
       <div>
         {this.state.wait ? x :
            <div className='account'>
-             <h1 style={{width:"30%",marginLeft:"40%",marginTop:"40px"}}>MY GITHUB INFO</h1>
+
              <Card className="content">
+               <h2 className="contenth2" >MY GITHUB INFO</h2>
                { GitHubInfo }
              </Card>
              <Card className="content">

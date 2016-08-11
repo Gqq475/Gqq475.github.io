@@ -49,7 +49,7 @@ class Echart extends React.Component {
   render () {
 
     let styles={
-      width:'600px',
+      width:'80%',
       height:'400px',
       margin:'0 auto'
     }

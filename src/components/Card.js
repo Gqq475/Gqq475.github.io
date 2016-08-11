@@ -5,14 +5,7 @@ class Card extends React.Component {
   }
   render () {
     let styles={
-      root:{
-        width:'70%',
-        height:'90px',
-        margin:'0 auto',
-        marginBottom:'15px',
-        cursor:'pointer',
 
-      },
       left:{
         float:'left',
         color:'#fff',
@@ -25,21 +18,20 @@ class Card extends React.Component {
       },
       right:{
         float:'left',
+        width:'80%',
         paddingLeft:'20px',
         color:'#777'
       },
-      h3:{
-        lineHeight:'56px'
-      },
+
       p:{
         opacity:'0.8'
       }
     }
     return(
-      <div style={styles.root} className="card" onClick={this.handleClick.bind(this)}>
+      <div  className="card" onClick={this.handleClick.bind(this)}>
         <div style={styles.left}>{this.props.index}</div>
         <div style={styles.right}>
-          <h3 style={styles.h3}>{this.props.title}</h3>
+          <h3 className="cardh3" >{this.props.title}</h3>
           <p style={styles.p}>{this.props.date}</p>
         </div>
       </div>
