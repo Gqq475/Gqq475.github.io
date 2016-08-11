@@ -20,7 +20,7 @@ class NavBar extends React.Component {
   setNavState(){
     this.setState({
       title:this.context.router.isActive('/', true) ? 'HOME' :
-        this.context.router.isActive('/blog')? 'List' :
+        this.context.router.isActive('/blogs')? 'List' :
         this.context.router.isActive('/about')? 'GithubAccount' : 'HOME'
     });
   }
@@ -55,7 +55,7 @@ class NavBar extends React.Component {
           <p style={styles.title}>{this.state.title}</p>
           <div style={styles.menu}>
             <MenuItem onTouchTap={this.handleClose.bind(this)}><Link to="/" style={styles.link} activeStyle={{color: 'red'}} onlyActiveOnIndex={true}>首页</Link></MenuItem>
-            <MenuItem onTouchTap={this.handleClose.bind(this)}> <Link to="/blog" style={styles.link} activeStyle={{color: 'red'}}>笔记列表</Link></MenuItem>
+            <MenuItem onTouchTap={this.handleClose.bind(this)}> <Link to="/blogs" style={styles.link} activeStyle={{color: 'red'}}>笔记列表</Link></MenuItem>
             <MenuItem onTouchTap={this.handleClose.bind(this)}> <Link to="/about" style={styles.link} activeStyle={{color: 'red'}}>个人信息</Link></MenuItem>
           </div>
         </Drawer>
