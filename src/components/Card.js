@@ -1,7 +1,7 @@
 import React from 'react';
 class Card extends React.Component {
   handleClick(){
-    this.context.router.push(`list/${this.props.url}`)
+    this.context.router.push(`blogs/${this.props.url}`)
   }
   render () {
     let styles={
@@ -11,7 +11,7 @@ class Card extends React.Component {
         margin:'0 auto',
         marginBottom:'15px',
         cursor:'pointer',
-      
+
       },
       left:{
         float:'left',
